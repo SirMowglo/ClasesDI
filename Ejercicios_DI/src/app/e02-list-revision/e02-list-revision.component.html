@@ -1,0 +1,12 @@
+<mat-list>
+    <div mat-subheader>Students</div>
+    <mat-list-item *ngFor="let student of studentList">
+      <mat-icon *ngIf="student.gender =='F'" mat-list-icon>account_box</mat-icon>
+      <mat-icon *ngIf="student.gender =='M'"
+      mat-list-icon>account_circle</mat-icon>
+      <mat-icon *ngIf="student.gender =='NB'"
+      mat-list-icon>android</mat-icon>
+      <div mat-line>{{student.name}} {{student.surname}}</div>
+      <div mat-line> {{student.age}}, {{student.gender}} </div>
+    </mat-list-item>
+</mat-list>

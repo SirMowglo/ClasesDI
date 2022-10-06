@@ -1,0 +1,10 @@
+<div>
+    <mat-form-field appearance="outline">
+      <mat-label>Dato a guardar</mat-label>
+      <input matInput placeholder="Dato..." [(ngModel)]="localData">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Dato guapo</mat-hint>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click) ='guardar()' *ngIf="localData!=''">Guardar</button>
+</div>
+

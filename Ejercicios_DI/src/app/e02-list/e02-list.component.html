@@ -1,0 +1,6 @@
+<h1>Lista to guapa de profesores</h1>
+<ul>
+    <li *ngFor="let profesor of profesores; let i=index">
+        {{i}}, {{profesor.name}}, {{profesor.subject}}
+    </li>
+</ul>
