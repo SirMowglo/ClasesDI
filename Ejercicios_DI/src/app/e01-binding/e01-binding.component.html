@@ -3,18 +3,58 @@
   <hr />
   <mat-form-field appearance="fill">
     <mat-label>Nombre</mat-label>
-    <input matInput />
+    <input matInput [(ngModel)]="inputNombre" />
   </mat-form-field>
   <br />
   <mat-form-field appearance="fill">
     <mat-label>Apellidos</mat-label>
-    <input matInput />
+    <input matInput [(ngModel)]="inputApellido" />
   </mat-form-field>
   <br />
   <mat-form-field appearance="fill">
     <mat-label>NIF</mat-label>
-    <input matInput />
+    <input matInput [(ngModel)]="inputNIF" />
   </mat-form-field>
   <br />
-  <button mat-raised-button color="primary">Register</button>
+  <mat-form-field appearance="fill">
+    <mat-label>Introduce tu email</mat-label>
+    <input
+      matInput
+      placeholder="Ej: pat@example.com"
+      [formControl]="email"
+      [(ngModel)]="inputEmail"
+    />
+    <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label>Telefono</mat-label>
+    <span matPrefix>+34 &nbsp;</span>
+    <input
+      type="tel"
+      [(ngModel)]="inputTelefono"
+      matInput
+      placeholder="612 123 123"
+    />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label>Sexo</mat-label>
+    <mat-select [(ngModel)]="inputSexo">
+      <mat-option value="Masculino">Masculino</mat-option>
+      <mat-option value="Femenino">Femenino</mat-option>
+      <mat-option value="Otro">Otro</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Como conociste la pagina</mat-label>
+    <mat-select [(ngModel)]="inputConociste">
+      <mat-option value="Google">Busqueda en google</mat-option>
+      <mat-option value="Amigo">A traves de un amigo</mat-option>
+      <mat-option value="Profesor">Por mi profesor</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="accent" class="boton" (click)="register()">
+    Register
+  </button>
 </div>

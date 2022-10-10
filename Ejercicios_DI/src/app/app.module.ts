@@ -9,7 +9,7 @@ import { E01BindingComponent } from './e01-binding/e01-binding.component';
 import { E02ListComponent } from './e02-list/e02-list.component';
 import { E02ListRevisionComponent } from './e02-list-revision/e02-list-revision.component';
 import { StorageComponent } from './storage/storage.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialImportsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
