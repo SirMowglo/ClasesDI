@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { People, PeopleResponse } from '../interfaces/people.interface';
+import { PeopleResponse } from '../interfaces/people.interface';
 
 const API_BASE_URL= 'https://swapi.dev/api/';
 @Injectable({

@@ -1,5 +1,3 @@
-declare module namespace {
-
     export interface Pokemon {
         name: string;
         url: string;
@@ -12,4 +10,3 @@ declare module namespace {
         results: Pokemon[];
     }
 
-}
