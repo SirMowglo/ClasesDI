@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>
+    N° {{data.pokemonInfo.id}} -
+  {{
+    data.pokemonInfo.name.charAt(0).toUpperCase() +
+      data.pokemonInfo.name.substring(1)
+  }}
+</h1>
+<div mat-dialog-content class="dialog">
+  <div class="sprites">
+    <img [src]="data.pokemonInfo.sprites.front_default" alt="pito" />
+    <img [src]="data.pokemonInfo.sprites.back_default" alt="pito" />
+  </div>
+  <div>
+    <h2>Info</h2>
+    <ul>
+      <li>Peso: {{ data.pokemonInfo.weight / 10 }} kg</li>
+      <li>Altura: {{data.pokemonInfo.height /10}} m</li>
+      <li>
+        Tipo:
+        <div class="type1">{{ data.pokemonInfo.types[0].type.name }}</div>
+
+        <div *ngIf="isOneType" class="type2">
+          {{ data.pokemonInfo.types[1].type.name }}
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cerrar</button>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+h1 {
+  font-weight: bold;
+}
+li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dialog {
+  margin: auto;
+  width: 300px;
+  height: 305px;
+}
+.sprites {
+  margin-left: 18%;
+}
+
+.type1 {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 3px;
+  text-align: center;
+  width: 50px;
+  background-color: rgb(139, 169, 187);
+  color: aliceblue;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: rgba(0, 0, 0, 0.23);
+}
+
+.type2 {
+  padding: 3px;
+  text-align: center;
+  width: 50px;
+  background-color: rgb(184, 117, 117);
+  color: aliceblue;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: rgba(0, 0, 0, 0.23);
+}
