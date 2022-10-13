@@ -1,0 +1,36 @@
+h1{
+    margin:10px;
+    font-weight: bold;
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+}
+img{
+    width: 100px;
+    height: 100px;
+    margin-left: 18%;
+}
+.cartaHeader{
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.623);
+
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgba(34, 36, 44, 0.08);
+}
+.carta{
+    width: 250px;
+    background-color: aliceblue;
+    margin: 10px;
+}
+.carta:hover{
+    background-color: rgb(216, 236, 253);
+    transform: scale(1.02,1.02);
+}
+.carta:active{
+    background-color: rgb(182, 204, 224);
+    transform: scale(0.98,0.98);
+}

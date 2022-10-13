@@ -1,5 +1,18 @@
-<p>Listado facil de pokemon</p>
-
-<ul>
-    <li *ngFor="let pokemon of listadoPokemon">{{pokemon.name}}</li>
-</ul>
+<h1>Listado Pokemon</h1>
+<div>
+  <mat-card
+    *ngFor="let pokemon of listadoPokemon"
+    class="carta"
+    (click)="getPokemonInfo(pokemon)"
+  >
+    <mat-card-header class="cartaHeader">
+      <img [src]="getImg(pokemon)" alt="{{ pokemon.name }} IMG" />
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-title>{{
+        pokemon.name.charAt(0).toUpperCase() + pokemon.name.substring(1)
+      }}</mat-card-title>
+      <mat-card-subtitle>Click para mas info</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+</div>
