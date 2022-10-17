@@ -19,5 +19,4 @@ export class PokemonService {
     let id = pokemon.url.substring(baseUrl.length, pokemon.url.length - 1);
     return this.http.get<PokemonInfoResponse>(`${API_BASE_URL}/pokemon/${id}`);
   }
-
 }
