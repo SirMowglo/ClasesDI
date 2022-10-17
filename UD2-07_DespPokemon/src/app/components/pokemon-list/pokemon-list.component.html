@@ -1,9 +1,9 @@
 <div class="box">
     <mat-form-field appearance="fill">
         <mat-label>Selecciona tu pokemon</mat-label>
-        <mat-select>
+        <mat-select [(value)]="selected">
           <mat-option
-            value="one"
+            value="{{pokemon.name}}"
             *ngFor="let pokemon of pokemonList"
             (click)="getPokemon(pokemon.name)"
             >{{
@@ -17,7 +17,7 @@
           <mat-card-title>{{pokemonSelected.id}}. {{ pokemonSelected.name.charAt(0).toUpperCase() + pokemonSelected.name.substring(1)}}</mat-card-title>
           <mat-card-content>
             <div>
-                <img src="{{pokemonSelected.sprites.front_default}}"><img src="{{pokemonSelected.sprites.back_default}}"><img src="{{pokemonSelected.sprites.front_shiny}}"><img src="{{pokemonSelected.sprites.back_shiny}}">
+                <img [src]="pokemonSelected.sprites.front_default"><img [src]="pokemonSelected.sprites.back_default"><img [src]="pokemonSelected.sprites.front_shiny"><img [src]="pokemonSelected.sprites.back_shiny">
             </div>
             <p>Peso: {{pokemonSelected.weight/10}} kg</p>
             <p>Altura: {{pokemonSelected.height/10}} m</p>

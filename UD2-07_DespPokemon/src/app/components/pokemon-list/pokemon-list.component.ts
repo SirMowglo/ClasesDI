@@ -11,6 +11,7 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 export class PokemonListComponent implements OnInit {
   pokemonList: Pokemon[] =[];
   pokemonSelected: PokemonDetailResponse | undefined;
+  selected: string ='';
 
   constructor(private pokemonService: PokemonService) { }
 
