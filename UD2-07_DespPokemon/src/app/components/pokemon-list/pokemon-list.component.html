@@ -1,18 +1,27 @@
-<mat-form-field appearance="fill">
-  <mat-label>Selecciona tu pokemon</mat-label>
-  <mat-select>
-    <mat-option
-      value="one"
-      *ngFor="let pokemon of pokemonList"
-      (click)="getPokemon(pokemon.name)"
-      >{{
-        pokemon.name.charAt(0).toUpperCase() + pokemon.name.substring(1)
-      }}</mat-option
-    >
-  </mat-select>
-</mat-form-field>
-<mat-card class="pkSelected">
-  <div *ngIf="this.pokemonSelected != undefined">
-    <mat-card-title>{{ pokemonSelected.name.charAt(0).toUpperCase() + pokemonSelected.name.substring(1)}}</mat-card-title>
-  </div>
-</mat-card>
+<div class="box">
+    <mat-form-field appearance="fill">
+        <mat-label>Selecciona tu pokemon</mat-label>
+        <mat-select>
+          <mat-option
+            value="one"
+            *ngFor="let pokemon of pokemonList"
+            (click)="getPokemon(pokemon.name)"
+            >{{
+              pokemon.name.charAt(0).toUpperCase() + pokemon.name.substring(1)
+            }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+      <mat-card class="pkSelected" *ngIf="this.pokemonSelected != undefined">
+        <div >
+          <mat-card-title>{{pokemonSelected.id}}. {{ pokemonSelected.name.charAt(0).toUpperCase() + pokemonSelected.name.substring(1)}}</mat-card-title>
+          <mat-card-content>
+            <div>
+                <img src="{{pokemonSelected.sprites.front_default}}"><img src="{{pokemonSelected.sprites.back_default}}"><img src="{{pokemonSelected.sprites.front_shiny}}"><img src="{{pokemonSelected.sprites.back_shiny}}">
+            </div>
+            <p>Peso: {{pokemonSelected.weight/10}} kg</p>
+            <p>Altura: {{pokemonSelected.height/10}} m</p>
+          </mat-card-content>
+        </div>
+      </mat-card>
+</div>
