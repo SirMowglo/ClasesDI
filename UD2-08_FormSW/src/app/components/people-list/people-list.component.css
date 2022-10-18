@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 10px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.info span {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: medium;
+}
+mat-card,
+img {
+  width: 300px;
+  background-color: rgb(219, 231, 241);
+}
+img {
+  border-radius: 5px;
+}
+h1 {
+  font-weight: bold;
+  text-align: center;
+}
+h2{
+    margin-top: 5px;
+}
+ul {
+  transform: translate(-10px, -10px);
+}
