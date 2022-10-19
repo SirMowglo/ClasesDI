@@ -3,7 +3,7 @@
     <mat-card *ngFor="let char of peopleList; let i= index">
         <mat-card-title>{{char.name}}</mat-card-title>
         <mat-card-content>
-            <img src="https://starwars-visualguide.com/assets/img/characters/{{i+1}}.jpg" alt="image not found" (error)="handleMissingImage($event)">
+            <img src="https://starwars-visualguide.com/assets/img/characters/{{char.url.split('/').reverse()[1]}}.jpg" alt="image not found" (error)="handleMissingImage($event)">
             
             <div class="info">
                 <span>Altura: {{char.height}}cm  </span>

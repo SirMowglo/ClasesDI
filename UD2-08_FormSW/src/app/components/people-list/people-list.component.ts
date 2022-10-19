@@ -54,10 +54,6 @@ export class PeopleListComponent implements OnInit {
   }
 
   public newPeople(){
-    this.dialog.open(NewPeopleDialogComponent)
-    
-    // let persona ={} as People;
-    // persona.name = 'hola';
-    // this.peopleList.push(persona);
+    this.dialog.open(NewPeopleDialogComponent);
   }
 }

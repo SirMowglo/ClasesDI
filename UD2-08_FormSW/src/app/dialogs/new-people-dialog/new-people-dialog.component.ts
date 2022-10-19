@@ -25,8 +25,5 @@ export class NewPeopleDialogComponent implements OnInit {
   onSubmit() {
     alert("Nombre: "+this.loginFormGroup.get('nameFormControl')?.value+
     "\nGenero: "+ this.loginFormGroup.get('genreFormControl')?.value);
-    // let persona ={} as People;
-    // persona.name = this.loginFormGroup.get<string>('nameFormControl')?.value;
-    // persona.gender= this.loginFormGroup.get<string>('genreFormControl')?.value;
   }
 }
