@@ -39,3 +39,13 @@ h2{
 ul {
   transform: translate(-10px, -10px);
 }
+.addNew{
+  background-color: white;
+  height:640px ;
+  border-radius: 5px;
+}
+.addNew h1{
+  font-size: 180px;
+  transform: translateY(280px);
+  color: rgb(164, 187, 207);
+}

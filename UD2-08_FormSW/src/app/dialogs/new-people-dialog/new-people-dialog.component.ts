@@ -9,12 +9,14 @@ import { People } from 'src/app/interfaces/people.interface';
   styleUrls: ['./new-people-dialog.component.css']
 })
 export class NewPeopleDialogComponent implements OnInit {
-  userName: string = '';
-  userGenre: string = '';
+  charName: string = '';
+  charGenre: string = '';
+  charHeight: string = '';
 
-  loginFormGroup = new FormGroup({
-    nameFormControl: new FormControl(this.userName, [Validators.required]),
-    genreFormControl: new FormControl(this.userGenre, [Validators.required])
+  newPeopleFormGroup = new FormGroup({
+    nameFormControl: new FormControl(this.charName, [Validators.required]),
+    genreFormControl: new FormControl(this.charGenre, [Validators.required]),
+    heightFormControl: new FormControl(this.charHeight,[Validators.required,Validators.min(50) ,Validators.max(300)])
   });
   
   constructor() { }
@@ -23,7 +25,8 @@ export class NewPeopleDialogComponent implements OnInit {
   }
 
   onSubmit() {
-    alert("Nombre: "+this.loginFormGroup.get('nameFormControl')?.value+
-    "\nGenero: "+ this.loginFormGroup.get('genreFormControl')?.value);
+    alert("Nombre: "+this.newPeopleFormGroup.get('nameFormControl')?.value+
+    "\nGenero: "+ this.newPeopleFormGroup.get('genreFormControl')?.value+
+    "\nAltura: "+ this.newPeopleFormGroup.get('heightFormControl')?.value);
   }
 }

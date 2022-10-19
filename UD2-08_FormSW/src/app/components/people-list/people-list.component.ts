@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { EditPeopleDialogComponent } from 'src/app/dialogs/edit-people-dialog/edit-people-dialog.component';
 import { NewPeopleDialogComponent } from 'src/app/dialogs/new-people-dialog/new-people-dialog.component';
 import { Film } from 'src/app/interfaces/film.interface';
 import { People } from 'src/app/interfaces/people.interface';
@@ -22,7 +21,6 @@ export class PeopleListComponent implements OnInit {
   
   ngOnInit(): void {
     this.getPeopleList(1);
-    this.getPeopleList(2);
     this.getFilmList();
   }
   

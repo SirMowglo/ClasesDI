@@ -1,18 +1,18 @@
 <div>
-  <form [formGroup]="newPeopleFormGroup" (ngSubmit)="onSubmit()">
-    <h1>Nuevo Personaje</h1>
+  <form [formGroup]="editPeopleFormGroup">
+    <h1>Editar Personaje</h1>
     <mat-form-field appearance="fill">
-      <mat-label>Nombre</mat-label>
+      <mat-label>{{ this.charName }}</mat-label>
       <input
         matInput
-        placeholder="Nombre personaje"
+        placeholder="Change name"
         name="nombre"
         formControlName="nameFormControl"
       />
     </mat-form-field>
     <br />
     <mat-form-field appearance="fill">
-      <mat-label>Altura</mat-label>
+      <mat-label>{{ this.charHeight }}</mat-label>
       <input
         matInput
         placeholder="000"
@@ -22,6 +22,7 @@
       />
     </mat-form-field>
     <br />
+    <h2>Genre: {{ this.charGenre }}</h2>
     <mat-radio-group formControlName="genreFormControl">
       <mat-radio-button value="female">Female</mat-radio-button>
       <mat-radio-button value="male">Male</mat-radio-button>
@@ -32,9 +33,19 @@
       mat-raised-button
       color="primary"
       type="submit"
-      [disabled]="!newPeopleFormGroup.valid"
+      [disabled]="!editPeopleFormGroup.valid"
+      (click)="onSubmit()"
+      [routerLink]="'/index/'"
     >
       Guardar
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      class="close"
+      [routerLink]="'/index/'"
+    >
+    Cerrar
     </button>
   </form>
 </div>

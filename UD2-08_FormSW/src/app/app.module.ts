@@ -9,14 +9,15 @@ import { PeopleListComponent } from './components/people-list/people-list.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NewPeopleDialogComponent } from './dialogs/new-people-dialog/new-people-dialog.component';
-import { EditPeopleDialogComponent } from './dialogs/edit-people-dialog/edit-people-dialog.component';
+import { EditPeopleComponent } from './components/edit-people/edit-people.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PeopleListComponent,
     NewPeopleDialogComponent,
-    EditPeopleDialogComponent
+    EditPeopleComponent
   ],
   imports: [
     BrowserModule,
