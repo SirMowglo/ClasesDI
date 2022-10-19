@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialImportsModule } from './modules/material-imports/material-imports.module';
 import { PeopleListComponent } from './components/people-list/people-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NewPeopleDialogComponent } from './dialogs/new-people-dialog/new-people-dialog.component';
+import { EditPeopleDialogComponent } from './dialogs/edit-people-dialog/edit-people-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PeopleListComponent
+    PeopleListComponent,
+    NewPeopleDialogComponent,
+    EditPeopleDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MaterialImportsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+<form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill" >
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Simple placeholder" name="nombre" formControlName="nameFormControl">
+    </mat-form-field>
+    <br/>
+    <mat-radio-group formControlName="genreFormControl">
+        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="n/a">N/A</mat-radio-button>
+      </mat-radio-group>
+    <br>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!loginFormGroup.valid">Submit</button>
+  </form>
